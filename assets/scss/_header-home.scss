@@ -1,0 +1,82 @@
+.splash {
+    padding: 100px 0 0;
+    height: 900px;
+    background: $brown;
+    color: $white;
+    background: $blue-dark;
+    position: relative;
+    overflow: hidden;
+
+    .cow-container {
+        margin-top: 70px;
+    }
+}
+
+#spacecow {
+    height: 300px;
+    width: 310px;
+    float: left;
+    background: url("../images/cow-butt.svg") 0/contain no-repeat;
+    position: relative;
+
+    &:hover {
+        background-image: url("../images/cow-butt2.svg");
+    }
+}
+
+
+.title-container {
+    z-index: 3;
+    position: relative;
+}
+
+.title {
+    display: none;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px $black;
+
+    h1 {
+        font-size: 78px;
+        letter-spacing: 6px;
+        text-transform: lowercase;
+        margin-top: -60px;
+        text-align: center;
+    }
+}
+
+.planet-half {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index:1;
+
+    img.planet {
+        vertical-align: bottom;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        min-width: 768px;
+        max-width: 1200px;
+        height: 100%;
+    }
+}
+
+.planet-half-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    background-color: rgba(25,6,41,0);
+    background-image: -webkit-linear-gradient(rgba(25,6,41,0),#190629);
+    background-image: linear-gradient(rgba(25,6,41,0),#191f42);
+    z-index:2;
+}

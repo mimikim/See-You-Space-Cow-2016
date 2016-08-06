@@ -1,0 +1,65 @@
+#contact-form {
+    margin-top: 60px;
+
+    label {
+        display: none;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        border: 5px solid $black;
+        border-radius: 8px;
+        font-family: 'Proxima Nova Bold', sans-serif;
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+        outline: none;
+
+        &.error {
+            background: $pink-light;
+
+            &::-webkit-input-placeholder {
+                color: $white;
+            }
+            &::-moz-placeholder {
+                color: $white;
+            }
+            &:-ms-input-placeholder {
+                color: $white;
+            }
+            &:-moz-placeholder {
+                color: $white;
+            }
+        }
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .error-message {
+        color: $pink;
+        font-family: 'Proxima Nova Bold', sans-serif;
+        font-size: 24px;
+        margin: 0 auto 20px;
+    }
+
+    .btn-submit {
+        padding: 20px;
+        font-size: 35px;
+    }
+
+    ::-webkit-input-placeholder {
+        color: lighten( $blue, 40% );
+    }
+    ::-moz-placeholder {
+        color: lighten( $blue, 40% );
+    }
+    :-ms-input-placeholder {
+        color: lighten( $blue, 40% );
+    }
+    :-moz-placeholder {
+        color: lighten( $blue, 40% );
+    }
+}

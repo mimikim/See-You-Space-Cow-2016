@@ -1,0 +1,54 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width:100%;
+    color: $blue;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 20px;
+
+    &.overlay {
+        overflow: hidden;
+    }
+}
+
+::selection {
+    color: $white;
+    background-color: $blue;
+}
+
+::-moz-selection {
+    color: $white;
+    background-color: $blue;
+}
+
+a {
+    @include transition( all, .4s );
+
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Proxima Nova Bold', sans-serif;
+    line-height: normal;
+    margin: auto;
+}
+
+h1 {
+    font-size: 55px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin: 0 auto -260px;
+}

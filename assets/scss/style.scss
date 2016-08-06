@@ -1,0 +1,27 @@
+// framework
+@import 'bootstrap/bootstrap';
+
+// globals
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'globals';
+
+// components
+@import 'animations';
+@import 'graphics';
+@import 'form';
+@import 'buttons';
+
+// template parts
+@import 'header';
+@import 'footer';
+@import 'page';
+
+// specific templates
+@import 'header-home';
+@import 'page-home';
+@import 'page-contact';
+
+// responsive
+@import 'responsive';

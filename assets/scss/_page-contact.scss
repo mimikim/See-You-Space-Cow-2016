@@ -1,0 +1,43 @@
+.contact-form-header {
+    font-size: 22px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.contact-cow {
+    float: left;
+
+    .cow-head {
+        position: relative;
+        right: inherit;
+    }
+}
+
+.rocket-container {
+    position: relative;
+    height: 700px;
+
+    .canvas-container {
+        position: absolute;
+
+        &.blast-off {
+            animation: rocket-blastoff 5s linear;
+            -webkit-animation: rocket-blastoff 5s linear;
+            -moz-animation: rocket-blastoff 5s linear;
+        }
+    }
+}
+
+.rocket-toggle {
+    color: $pink;
+    font-weight: bold;
+    cursor: pointer;
+    @include transition( all, .4s );
+
+    &:hover, &:active, &:focus {
+        color: $yellow-light;
+    }
+}

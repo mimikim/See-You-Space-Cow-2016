@@ -1,0 +1,82 @@
+// space cow floating animation
+
+@keyframes roaming {
+    0% {
+        left: 0;
+        top: 20px;
+    }
+
+    25% {
+        left: 30px;
+        top: 20px;
+    }
+
+    50% {
+        left: 50px;
+        top: 60px;
+    }
+
+    75% {
+        left: 10px;
+        top: 30px;
+    }
+
+    100% {
+        left: 5px;
+        top: 50px;
+    }
+}
+
+@-webkit-keyframes roaming {
+    0% {
+        left: 0;
+        top: 20px;
+    }
+
+    25% {
+        left: 30px;
+        top: 20px;
+    }
+
+    50% {
+        left: 50px;
+        top: 60px;
+    }
+
+    75% {
+        left: 10px;
+        top: 30px;
+    }
+
+    100% {
+        left: 5px;
+        top: 50px;
+    }
+}
+
+@-moz-keyframes roaming {
+    0% {
+        left: 0;
+        top: 20px;
+    }
+
+    25% {
+        left: 30px;
+        top: 20px;
+    }
+
+    50% {
+        left: 50px;
+        top: 60px;
+    }
+
+    75% {
+        left: 10px;
+        top: 30px;
+    }
+
+    100% {
+        left: 5px;
+        top: 50px;
+    }
+}

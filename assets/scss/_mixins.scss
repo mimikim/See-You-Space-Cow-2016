@@ -1,0 +1,20 @@
+// mixins
+@mixin transition( $property, $time ) {
+    transition: $property $time;
+    -webkit-transition: $property $time;
+    -moz-transition: $property $time;
+}
+
+@mixin transform ( $properties ) {
+    transform: $properties;
+    -webkit-transform: $properties;
+    -moz-transform: $properties;
+}
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

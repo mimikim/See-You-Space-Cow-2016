@@ -1,0 +1,18 @@
+// rocket launch
+@keyframes rocket-blastoff {
+    0%  { bottom:0; }
+    20% { bottom: 10% }
+    100%{ bottom: 200%; }
+}
+
+@-webkit-keyframes rocket-blastoff {
+    0%  { bottom:0; }
+    20% { bottom: 10% }
+    100%{ bottom: 200%; }
+}
+
+@-moz-keyframes rocket-blastoff {
+    0%  { bottom:0; }
+    20% { bottom: 10% }
+    100%{ bottom: 200%; }
+}

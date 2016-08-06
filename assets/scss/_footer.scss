@@ -1,0 +1,37 @@
+footer {
+    background: $blue-dark;
+    padding: 80px 0;
+    height: 260px;
+    margin-top: 260px;
+
+    a {
+        color: $white;
+
+        span {
+            @include transition( all, .4s );
+        }
+
+        &:hover, &:active, &:focus {
+            color: $white;
+            span {
+                @include transform( rotate(180deg) );
+            }
+        }
+    }
+}
+
+ul.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        margin-right: 80px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}

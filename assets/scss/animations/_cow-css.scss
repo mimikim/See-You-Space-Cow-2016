@@ -1,0 +1,54 @@
+// cow floating
+@keyframes floating-cow {
+    0% { left: 0; top: 20px; }
+    25% { left: 30px; top: 20px; }
+    50% { left: 50px; top: 60px; }
+    75% { left: 10px; top: 30px; }
+    100% { left: 5px; top: 50px; }
+}
+@-webkit-keyframes floating-cow {
+    0% { left: 0; top: 20px; }
+    25% { left: 30px; top: 20px; }
+    50% { left: 50px; top: 60px; }
+    75% { left: 10px; top: 30px; }
+    100% { left: 5px; top: 50px; }
+}
+@-moz-keyframes floating-cow {
+    0% { left: 0; top: 20px; }
+    25% { left: 30px; top: 20px; }
+    50% { left: 50px; top: 60px; }
+    75% { left: 10px; top: 30px; }
+    100% { left: 5px; top: 50px; }
+}
+
+// cow tail wagging
+@keyframes tail-wagging {
+    from { transform: rotate(60deg); }
+    to { transform: rotate(70deg); }
+}
+
+@-webkit-keyframes tail-wagging {
+    from { transform: rotate(60deg); }
+    to { transform: rotate(70deg); }
+}
+@-moz-keyframes tail-wagging {
+    from { transform: rotate(60deg); }
+    to { transform: rotate(70deg); }
+}
+
+// cow head bob
+@keyframes head-bob {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+@-webkit-keyframes head-bob {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+@-moz-keyframes head-bob {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
