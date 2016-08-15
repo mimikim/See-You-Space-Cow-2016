@@ -2,7 +2,7 @@
 function mk_register_portfolio() {
 
     $labels = array(
-        'name' => 'Portfolio Item',
+        'name' => 'Portfolio',
         'singular_name' => 'Portfolio',
         'add_new' => 'Add New',
         'add_new_item' => 'Add New Portfolio Item',

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="utf-8">
@@ -23,9 +23,8 @@
                     <div class="col-md-12">
                         <div class="title">
                             <h1>See You<br>Space Cow</h1>
-
                             <div class="cow-container">
-                                <?php get_template_part('partials/floating-cow-graphic'); ?>
+                                <?php get_template_part('partials/graphic-cow-butt'); ?>
                             </div>
                         </div>
                     </div>
@@ -48,15 +47,26 @@
                 if ( is_page() ) {
                     echo get_field('page_header', $post->ID);
                 }
-
-                if ( is_single() ) {
-
-                    echo is_singular('mk_portfolio') ? 'Portfolio Item: ' : '';
+                else if ( is_single() ) {
                     echo the_title();
+                }
+                else if ( is_archive() ) {
+                    echo post_type_archive_title( );
 
                 }
             ?>
         </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+                }
+                ?>
+            </div>
+        </div>
     </div>
 <?php endif; ?>
 

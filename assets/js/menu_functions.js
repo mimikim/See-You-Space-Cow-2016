@@ -11,8 +11,12 @@ function menu_dropdown() {
 
         $(this).toggleClass('active');
     });
+}
 
-
-    // adjust font
-
+function header_scroll() {
+    var header = $('header');
+    if ($(window).scrollTop() > 100)
+        header.addClass('fixed');
+    else
+        header.removeClass('fixed');
 }

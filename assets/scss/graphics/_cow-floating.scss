@@ -1,0 +1,211 @@
+// css graphics!
+$white : #ffffff;
+$cow-white : #f8f8ff;
+$cow-nose : #fdcad5;
+$cow-helmet : #DCDCDC;
+$cow-spot : #646873;
+
+.floating-cow-graphic {
+    .cow-body {
+        background: $cow-white;
+        border:8px solid $black;
+        width: 310px;
+        height: 215px;
+        display: inline-block;
+        position: relative;
+        border-radius: 200px 100px 200px 200px;
+        @include animation( floating-cow 5s linear infinite alternate );
+
+        .head {
+            position: absolute;
+            right: -60px;
+            top: -27px;
+            @include animation( head-bob 2s linear infinite alternate );
+        }
+
+        .body-spot {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            background: $cow-spot;
+            width: 160px;
+            height: 130px;
+            border-radius: 96px 0 96px 28px;
+            z-index: 1;
+        }
+
+        .leg {
+            border:8px solid $black;
+            border-top: 0;
+            height: 95px;
+            width: 32px;
+            background: $cow-white;
+            display: inline-block;
+            position: absolute;
+            bottom: -55px;
+            border-radius: 0 0 10px 10px;
+
+            &.left { left: 45px; }
+            &.right { right: 55px; }
+
+            .hoof {
+                background: $brown-light;
+                height: 20px;
+                width: 16px;
+                position: absolute;
+                bottom: 0;
+                border-radius: 0 0 1px 1px;
+            }
+
+        }
+
+        .tail {
+            border: 8px solid $black;
+            border-top: 0;
+            height: 70px;
+            width: 22px;
+            background: $cow-white;
+            display: inline-block;
+            position: absolute;
+            margin-top: 60px;
+            transform: rotate(60deg);
+            transform-origin: top;
+            border-radius: 20px 0 100px 20px;
+            @include animation( tail-wagging .2s linear infinite alternate );
+        }
+
+    }
+
+    .cow-head {
+        //transform: rotate(-50deg);
+        background:$cow-white;
+        border:8px solid $black;
+        height: 160px;
+        width: 125px;
+        border-radius: 27px 27px 60px 60px;
+        position: absolute;
+        right: 0;
+
+        .spot {
+            background: $cow-spot;
+            width: 50px;
+            height: 75px;
+            border-radius: 16px 0 35px 0;
+        }
+
+        .eyes {
+            position: absolute;
+            width: 100%;
+            top: 40px;
+
+            .eye {
+                background: $black;
+                width: 10px;
+                height: 15px;
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+
+                &.left { left: 25px; }
+                &.right { right: 25px; }
+            }
+        }
+
+        .nose {
+            background: $cow-nose;
+            height: 50px;
+            width:calc( 125px - 16px );
+            position: absolute;
+            bottom: 0;
+            border-radius: 0 0 50px 50px;
+
+            .nostrils {
+                position: absolute;
+                width: 100%;
+                bottom: 30px;
+
+                .nostril {
+                    background: $black;
+                    width: 4px;
+                    height: 7px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    position: absolute;
+
+                    &.left {
+                        left: 40px;
+                        transform: rotate(-30deg);
+                    }
+                    &.right {
+                        right: 40px;
+                        transform: rotate(30deg);
+                    }
+                }
+
+            }
+        }
+
+        .horns {
+            position: absolute;
+            top: -25px;
+            width: 100%;
+
+            .horn {
+                position: absolute;
+                background: $brown-light;
+                border: 8px solid $black;
+                width: 25px;
+                height: 30px;
+                display: inline-block;
+                border-radius: 16px;
+
+                &.left { left: 15px; }
+                &.right { right: 15px; }
+            }
+        }
+
+        .ears {
+            position: absolute;
+            top: -10px;
+            width: 100%;
+
+            .ear {
+                position: absolute;
+                background: $cow-white;
+                border: 8px solid $black;
+                width: 30px;
+                height: 35px;
+                display: inline-block;
+                border-radius: 15px 15px 20px 20px;
+
+                &.left { left: -15px; }
+                &.right { right: -15px; }
+            }
+
+        }
+    }
+
+    .astronaut-helmet {
+        border:8px solid $black;
+        background: none;
+        position: absolute;
+        top: -50px;
+        right: -41px;
+        height: 233px;
+        width: 210px;
+        border-radius: 50%;
+        background: rgba( $cow-helmet, 0.8);
+
+        .glare {
+            background: $white;
+            height: 75px;
+            width: 15px;
+            border-radius: 100%;
+            position: absolute;
+            right: 23px;
+            top: 17px;
+            transform: rotate(-32deg);
+            z-index: 1;
+        }
+    }
+}

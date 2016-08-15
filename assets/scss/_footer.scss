@@ -8,7 +8,7 @@ footer {
         color: $white;
 
         span {
-            @include transition( all, .4s );
+            @include transition( all .4s );
         }
 
         &:hover, &:active, &:focus {

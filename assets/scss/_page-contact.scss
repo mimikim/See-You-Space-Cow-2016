@@ -24,9 +24,7 @@
         position: absolute;
 
         &.blast-off {
-            animation: rocket-blastoff 5s linear;
-            -webkit-animation: rocket-blastoff 5s linear;
-            -moz-animation: rocket-blastoff 5s linear;
+            @include animation(rocket-blastoff 5s linear);
         }
     }
 }
@@ -35,7 +33,7 @@
     color: $pink;
     font-weight: bold;
     cursor: pointer;
-    @include transition( all, .4s );
+    @include transition( all .4s );
 
     &:hover, &:active, &:focus {
         color: $yellow-light;

@@ -17,11 +17,28 @@
 @import 'header';
 @import 'footer';
 @import 'page';
+@import 'single';
 
 // specific templates
 @import 'header-home';
 @import 'page-home';
 @import 'page-contact';
+@import 'single-portfolio';
+@import 'archive-portfolio';
+
 
 // responsive
-@import 'responsive';
+@import 'responsive/header-home';
+@import 'responsive/page-home';
+@import 'responsive/page-contact';
+@import 'responsive/single-portfolio';
+@import 'responsive/archive-portfolio';
+
+@import 'responsive/header';
+@import 'responsive/footer';
+@import 'responsive/page';
+
+//@import 'form';
+@import 'responsive/buttons';
+
+//@import 'globals';

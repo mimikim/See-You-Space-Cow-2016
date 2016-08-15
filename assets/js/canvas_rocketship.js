@@ -119,6 +119,4 @@ function blast_off() {
     setTimeout(function(){
         $(rocket_container).removeClass('blast-off');
     }, 5000);
-
-
 }

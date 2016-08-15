@@ -12,20 +12,3 @@ function mk_combine_functions() {
     }
 }
 add_action('after_setup_theme', 'mk_combine_functions');
-
-
-if( function_exists('acf_add_options_page') ) {
-
-    acf_add_options_page();
-}
-
-
-function register_menu() {
-    register_nav_menu('primary-menu',__( 'Primary Menu' ));
-}
-add_action( 'init', 'register_menu' );
-
-function mk_remove_from_admin() {
-    remove_menu_page( 'edit-comments.php' );
-}
-add_action( 'admin_menu', 'mk_remove_from_admin' );

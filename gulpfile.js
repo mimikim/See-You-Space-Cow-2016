@@ -2,21 +2,21 @@
 var gulp = require('gulp');
 
 // Include Our Plugins
-var jshint = require('gulp-jshint'),
-    sass = require('gulp-sass'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    changed  = require('gulp-changed'),
-    imagemin = require('gulp-imagemin'),
+var jshint       = require('gulp-jshint'),
+    sass         = require('gulp-sass'),
+    concat       = require('gulp-concat'),
+    uglify       = require('gulp-uglify'),
+    rename       = require('gulp-rename'),
+    changed      = require('gulp-changed'),
+    imagemin     = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer');
 
 
 // Images
 gulp.task('images', function() {
     return gulp.src('assets/images/**')
-        .pipe(changed('dist/images')) // Only apply to changed files
-        .pipe(imagemin()) // Optimize
+        .pipe(changed('dist/images'))
+        .pipe(imagemin())
         .pipe(gulp.dest('dist/images'));
 });
 
@@ -29,16 +29,29 @@ gulp.task('lint', function() {
 
 // Compile Our Sass
 gulp.task('sass', function() {
+    // ignore vendor plugins
+    gulp.src(['assets/scss/vendor/**']).pipe(gulp.dest('dist/css/vendor'));
+
+    gulp.src('assets/scss/ie/*.scss')
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(rename('ie.min.css'))
+        .pipe(gulp.dest('dist/css'));
+
     return gulp.src('assets/scss/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(autoprefixer())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(rename('style.min.css'))
         .pipe(gulp.dest('dist/css'));
+
 });
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
 
-    gulp.src(['assets/js/plugins/**']).pipe(gulp.dest('dist/js/vendor'));
+    gulp.src(['assets/js/vendor/**']).pipe(gulp.dest('dist/js/vendor'));
 
     return gulp.src('assets/js/*.js')
         .pipe(concat('all.js'))
@@ -49,9 +62,7 @@ gulp.task('scripts', function() {
 
 // Transfer Font Directories
 gulp.task('fonts', function() {
-
     gulp.src(['assets/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
-
 });
 
 // Watch Files For Changes

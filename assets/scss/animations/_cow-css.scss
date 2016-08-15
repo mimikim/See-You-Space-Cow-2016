@@ -40,15 +40,15 @@
 @keyframes head-bob {
     0% { transform: rotate(0deg); }
     50% { transform: rotate(-10deg); }
-    100% { transform: rotate(0deg); }
+    100% { transform: rotate(10deg); }
 }
 @-webkit-keyframes head-bob {
     0% { transform: rotate(0deg); }
     50% { transform: rotate(-10deg); }
-    100% { transform: rotate(0deg); }
+    100% { transform: rotate(10deg); }
 }
 @-moz-keyframes head-bob {
     0% { transform: rotate(0deg); }
     50% { transform: rotate(-10deg); }
-    100% { transform: rotate(0deg); }
+    100% { transform: rotate(10deg); }
 }

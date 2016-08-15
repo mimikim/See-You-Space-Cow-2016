@@ -1,0 +1,46 @@
+@media screen and ( max-width: 1010px ) {
+
+    .rocket-container {
+        height: 500px;
+        margin-top: 150px;
+    }
+
+    #rocket-canvas {
+        width: 100%;
+    }
+
+}
+
+@media screen and ( max-width: 768px ) {
+
+    .rocket-container {
+        margin-top: 0;
+        height: 700px;
+
+        .canvas-container {
+            position: relative;
+            text-align: center;
+        }
+    }
+
+    #rocket-canvas {
+        width: inherit;
+    }
+
+}
+
+@media screen and ( max-width: 460px ) {
+
+    #rocket-canvas {
+        width: 100%;
+    }
+
+}
+
+@media screen and ( max-width: 350px ) {
+
+    .rocket-container {
+        height: 500px;
+    }
+
+}

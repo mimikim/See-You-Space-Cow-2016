@@ -4,15 +4,8 @@ jQuery(document).ready(function(){
 
     menu_dropdown();
 
-    function fixDiv() {
-        var header = $('header');
-        if ($(window).scrollTop() > 100)
-            header.addClass('fixed');
-        else
-            header.removeClass('fixed');
-    }
-    $(window).scroll(fixDiv);
-    fixDiv();
+    $(window).scroll(header_scroll);
+    header_scroll();
 
     // homepage
     $( ".splash .title" ).fadeIn( 800 );
@@ -28,6 +21,68 @@ jQuery(document).ready(function(){
 
         blast_off();
     });
+
+
+    $('.homepage-slider').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        centerMode: true,
+        swipeToSlide: true,
+        autoplay: true,
+        responsive: [
+
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false
+                }
+            }
+        ]
+    });
+
+    $('.portfolio-slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.portfolio-slider-nav',
+        swipeToSlide: true
+    }).click(function() {
+        $('.portfolio-slider-for').slick('slickGoTo', parseInt($('.portfolio-slider-for').slick('slickCurrentSlide'))+1);
+        $('.portfolio-slider-nav').slick('slickGoTo', parseInt($('.portfolio-slider-nav').slick('slickCurrentSlide'))+1);
+    });
+
+    $('.portfolio-slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.portfolio-slider-for',
+        dots: true,
+        focusOnSelect: true,
+        infinite: true,
+        swipeToSlide: true,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
+
+
 
 
     // send contact email
@@ -72,7 +127,7 @@ jQuery(document).ready(function(){
 
             $(this).find('.error-message').empty();
 
-            send_contact_email( email_message, nonce );
+            /*send_contact_email( email_message, nonce );*/
         }
 
     });

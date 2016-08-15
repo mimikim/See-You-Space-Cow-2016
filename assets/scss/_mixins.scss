@@ -1,20 +1,32 @@
 // mixins
-@mixin transition( $property, $time ) {
-    transition: $property $time;
-    -webkit-transition: $property $time;
-    -moz-transition: $property $time;
+@mixin transition( $properties ) {
+    -webkit-transition: $properties;
+    -moz-transition: $properties;
+    -o-transition: $properties;
+    transition: $properties;
 }
 
 @mixin transform ( $properties ) {
-    transform: $properties;
     -webkit-transform: $properties;
     -moz-transform: $properties;
+    -ms-transform: $properties;
+    -o-transform: $properties;
+    transform: $properties;
 }
 
 @mixin vertical-align($position: relative) {
     position: $position;
     top: 50%;
     -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+@mixin animation( $properties ) {
+    -webkit-animation: $properties;
+    -moz-animation: $properties;
+    -o-animation: $properties;
+    animation: $properties
 }

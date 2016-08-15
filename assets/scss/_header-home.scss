@@ -8,22 +8,10 @@
     overflow: hidden;
 
     .cow-container {
-        margin-top: 70px;
+        position: relative;
+        @include animation( floating-cow 5s linear infinite alternate );
     }
 }
-
-#spacecow {
-    height: 300px;
-    width: 310px;
-    float: left;
-    background: url("../images/cow-butt.svg") 0/contain no-repeat;
-    position: relative;
-
-    &:hover {
-        background-image: url("../images/cow-butt2.svg");
-    }
-}
-
 
 .title-container {
     z-index: 3;

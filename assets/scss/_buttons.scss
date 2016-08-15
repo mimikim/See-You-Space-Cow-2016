@@ -1,10 +1,9 @@
 .btn {
-    width: 100%;
     font-weight: bold;
     font-size: 20px;
-    padding: 10px;
-    background: $blue;
-    color: $white;
+    padding: 15px 35px;
+    background: $yellow-light;
+    color: $black;
     transition: background .2s ease-in;
     outline: none;
     letter-spacing: 2px;
@@ -13,8 +12,8 @@
     font-family: 'Proxima Nova Bold', sans-serif;
 
     &:hover, &:active, &:focus {
-        background: $yellow-light;
-        color: $black;
+        background: $blue;
+        color: $white;
         outline: 0 !important;
     }
 
@@ -29,6 +28,10 @@
         &:hover, &:active, &:focus {
             background: darken(gray, 8%)
         }
+    }
+
+    &.btn-full {
+        width: 100%;
     }
 
 }

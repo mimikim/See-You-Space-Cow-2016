@@ -1,0 +1,23 @@
+@media screen and ( max-width: 992px ) {
+
+    .portfolio-specs {
+        padding-top: 40px;
+    }
+
+    .portfolio-overview {
+        padding-bottom: 50px;
+    }
+
+}
+
+@media screen and ( max-width: 768px ) {
+
+    .portfolio-slider-nav {
+
+        .thumbnail {
+            margin: 0 10px;
+        }
+
+    }
+
+}

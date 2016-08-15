@@ -1,0 +1,36 @@
+// header home responsiveness
+
+@media screen and ( max-width: 560px ) {
+
+    .title {
+        h1 {
+            letter-spacing: 3px;
+        }
+    }
+
+    .splash {
+        .cow-container {
+            top: 50px;
+            @include animation( none );
+
+        }
+    }
+}
+
+@media screen and ( max-width: 480px ) {
+
+    .title {
+        h1 {
+            font-size: 14vw;
+        }
+    }
+
+    .splash {
+        .cow-container {
+            canvas {
+                width: 100%;
+            }
+        }
+    }
+
+}

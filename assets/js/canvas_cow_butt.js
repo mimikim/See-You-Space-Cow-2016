@@ -8,11 +8,10 @@ function load_cow_butt() {
         'cow_white'    : '#f8f8ff',
         'cow_nose'     : '#fdcad5',
         'cow_helmet'   : '#DCDCDC',
-        //'cow_helmet'   : 'rgba(220,220,220,0.4)',
         'hoof'         : '#B8A381',
         //'cow_spot'     : '#444852',
         'cow_spot'     : '#646873',
-        'stroke_color' : '#222',
+        'stroke_color' : '#111',
         'line_join'    : 'round',
         'line_width'   : 8
     };
@@ -25,7 +24,6 @@ function load_cow_butt() {
         cow_butt_eyes( cow, attrs, false );
 
         setInterval(function() {
-
             // clear canvas before drawing again
             cow_clear( cow );
 
@@ -200,7 +198,6 @@ function cow_butt( cow, style ) {
 
     // tail
     cow.save();
-
 
 
     cow.beginPath();

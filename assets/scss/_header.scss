@@ -6,7 +6,7 @@ header {
     width: 100%;
     z-index: 998;
     height: 88px;
-    @include transition( all, .6s );
+    @include transition( all .6s );
 
     &.fixed {
         background: rgba( $white, .9 );
@@ -48,7 +48,7 @@ header {
     a {
         color: $white;
         text-decoration: none;
-        @include transition( all, .4s );
+        @include transition( all .4s );
 
         &:hover, &:focus, &:active {
             font-size: 22px;
@@ -76,7 +76,7 @@ header {
         position:absolute;
         left:0;
         border-radius:(5px / 2);
-        @include transition( all, .4s );
+        @include transition( all .4s );
 
         &.line-1 {
             top:0;
@@ -130,7 +130,7 @@ header {
     top: 0;
     z-index: 998;
     background: rgba( $blue, 1);
-    @include transition( all, .4s );
+    @include transition( all .4s );
 
 
     &.overlay {
@@ -157,7 +157,7 @@ header {
                 display: block;
                 color: $white;
                 padding: 10px 0;
-                @include transition( all, .4s );
+                @include transition( all .4s );
 
                 &:hover {
                     text-decoration: none;
@@ -186,5 +186,5 @@ header {
     position: absolute;
     top: 0;
     opacity: .05;
-    animation: blink 2s ease-in infinite alternate;
+    @include animation( blink 2s ease-in infinite alternate );
 }

@@ -9,7 +9,7 @@ $admin_email = get_option('admin_email');
 
 $headers = array(
     'Content-Type: text/html; charset=UTF-8',
-    'From: Mimi Kim <donotreply@mindgrub.com>'
+    'From: Mimi Kim <donotreply@mimikimwebdeveloper.com>'
 );
 
 $to = array(

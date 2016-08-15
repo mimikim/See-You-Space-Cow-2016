@@ -1,0 +1,35 @@
+// homepage respons
+@media screen and ( max-width: 992px ) {
+
+    .page-home {
+        .specialties {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and ( max-width: 768px ) {
+
+    .page-home {
+
+        h2 {
+            font-size: 40px;
+        }
+        .specialties {
+            font-size: 18px;
+            margin-bottom: 50px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .intro-div {
+        .text {
+            margin-bottom: 60px;
+            font-size: 25px;
+        }
+    }
+}
+
