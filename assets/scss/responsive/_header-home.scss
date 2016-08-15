@@ -2,9 +2,11 @@
 
 @media screen and ( max-width: 560px ) {
 
-    .title {
-        h1 {
-            letter-spacing: 3px;
+    .title-container {
+        .title {
+            h1 {
+                letter-spacing: 3px;
+            }
         }
     }
 
@@ -19,9 +21,11 @@
 
 @media screen and ( max-width: 480px ) {
 
-    .title {
-        h1 {
-            font-size: 14vw;
+    .title-container {
+        .title {
+            h1 {
+                font-size: 14vw;
+            }
         }
     }
 

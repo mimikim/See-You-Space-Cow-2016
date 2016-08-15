@@ -22,14 +22,15 @@
 // specific templates
 @import 'header-home';
 @import 'page-home';
+@import 'page-about';
 @import 'page-contact';
 @import 'single-portfolio';
 @import 'archive-portfolio';
 
-
 // responsive
 @import 'responsive/header-home';
 @import 'responsive/page-home';
+@import 'responsive/page-about';
 @import 'responsive/page-contact';
 @import 'responsive/single-portfolio';
 @import 'responsive/archive-portfolio';

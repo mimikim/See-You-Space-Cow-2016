@@ -16,23 +16,24 @@
 .title-container {
     z-index: 3;
     position: relative;
-}
 
-.title {
-    display: none;
-    position: absolute;
-    top: 100px;
-    width: 100%;
-    line-height: 1.2;
-    text-shadow: 2px 2px 5px $black;
+    .title {
+        display: none;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        line-height: 1.2;
+        text-shadow: 2px 2px 5px $black;
 
-    h1 {
-        font-size: 78px;
-        letter-spacing: 6px;
-        text-transform: lowercase;
-        margin-top: -60px;
-        text-align: center;
+        h1 {
+            font-size: 78px;
+            letter-spacing: 6px;
+            text-transform: lowercase;
+            margin-top: -60px;
+            text-align: center;
+        }
     }
+
 }
 
 .planet-half {

@@ -23,7 +23,7 @@
                 <a href="">Tutorials</a>
             </li>
             <li>
-                <a href="">About</a>
+                <a href="<?php echo get_permalink(25); ?>">About</a>
             </li>
             <li>
                 <a href="<?php echo get_permalink(11); ?>">Contact</a>

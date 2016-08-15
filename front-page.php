@@ -23,7 +23,7 @@
                     Highly customized, clean Wordpress themes built with an end-user's experience in mind.
                 </p>
             </div>
-            <div class="col-sm-4 specialties">
+            <div class="col-md-4 specialties">
                 <div class="cow-face"></div>
                 <h3>HTML/CSS/JS</h3>
                 <p>
@@ -32,7 +32,7 @@
                     Straight HTML pages. Old school, without reliance on a CMS, but still just as modern.
                 </p>
             </div>
-            <div class="col-sm-4 specialties">
+            <div class="col-md-4 specialties">
                 <div class="cow-face"></div>
                 <h3>Responsive Emails</h3>
                 <p>
@@ -73,7 +73,7 @@
                    <?php endforeach; ?>
                 </div>
 
-                <div class="see-more"><a href="<?php echo get_post_type_archive_link( 'mk_portfolio' ); ?>" class="btn">See All Portfolio Work</a></div>
+                <div class="see-more"><a href="<?php echo get_post_type_archive_link( 'mk_portfolio' ); ?>" class="btn btn-inline">See All Portfolio Work</a></div>
 
             </div>
         </div>
@@ -123,7 +123,7 @@
 
                 </div>
 
-                <div class="see-more"><a href="" class="btn">See All Tutorial Posts</a></div>
+                <div class="see-more"><a href="" class="btn btn-inline">See All Tutorial Posts</a></div>
 
             </div>
         </div>

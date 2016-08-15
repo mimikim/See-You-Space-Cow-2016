@@ -60,7 +60,7 @@
     .slide {
         margin:0 20px;
         font-size: 14px;
-        @include transition( all .4s ease-in );
+        @include transition( all .3s ease-in );
 
         &:hover {
             transform: scale( .95, .95 );

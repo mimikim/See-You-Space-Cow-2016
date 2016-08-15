@@ -1,0 +1,51 @@
+@media screen and ( max-width: 992px ) {
+
+    .about-profile {
+        font-size: 28px;
+
+        .links {
+            .btn {
+                width: 100%;
+                margin: 0 auto 40px;
+            }
+        }
+    }
+
+    .profile-image {
+        width: 250px;
+    }
+
+}
+
+
+@media screen and ( max-width: 768px ) {
+
+    .about-profile {
+        font-size: 25px;
+    }
+
+    .profile-image {
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+
+    .about-profile {
+        margin-bottom: 30px;
+
+        p {
+            text-indent: 0;
+        }
+    }
+
+    .profile-image {
+        display: none;
+    }
+
+    .hm-cow-happy {
+        float: none !important;
+        margin: 0 auto 20px;
+    }
+}

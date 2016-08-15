@@ -2,3 +2,12 @@
     background: url('../images/cow-head.png') 0/contain no-repeat;
     position: relative;
 }
+
+.hm-cow-happy {
+    background: url('../images/harvestmoon-cow-tail-wag.png') 0 100% no-repeat;
+    height: 132px;
+    width: 162px;
+    float: right;
+    margin-left: 20px;
+    @include animation( hm-cow-happy 1s steps(2) infinite );
+}

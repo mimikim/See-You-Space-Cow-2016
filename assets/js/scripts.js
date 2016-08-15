@@ -33,7 +33,6 @@ jQuery(document).ready(function(){
         swipeToSlide: true,
         autoplay: true,
         responsive: [
-
             {
                 breakpoint: 992,
                 settings: {
