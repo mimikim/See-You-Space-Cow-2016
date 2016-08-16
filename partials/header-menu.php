@@ -20,7 +20,7 @@
                 <a href="<?php echo get_post_type_archive_link( 'mk_portfolio' ); ?>">Work</a>
             </li>
             <li>
-                <a href="">Tutorials</a>
+                <a href="<?php echo get_permalink(21); ?>">Tutorials</a>
             </li>
             <li>
                 <a href="<?php echo get_permalink(25); ?>">About</a>

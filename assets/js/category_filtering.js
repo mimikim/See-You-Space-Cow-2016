@@ -1,4 +1,4 @@
-function portfolio_filter( selected_category ) {
+function category_filtering( post_type, category_array ) {
 
     var archive_results = $('#archive-results'),
         ajax_loader = $('.ajax-loader');
@@ -14,8 +14,9 @@ function portfolio_filter( selected_category ) {
         url : ajax.ajax_url,
 
         data : {
-            'action'    : 'mk_portfolio_filtering',
-            'category'  : selected_category
+            'action'         : 'mk_category_filtering',
+            'category_array' : category_array,
+            'post_type'      : post_type
         },
 
         success : function(response) {

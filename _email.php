@@ -1,5 +1,3 @@
-<?php /* Template Name: Blog Page */ ?>
-
 <!DOCTYPE HTML>
 <html>
 <head>

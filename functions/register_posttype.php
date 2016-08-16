@@ -28,7 +28,7 @@ function mk_register_portfolio() {
         'capability_type' => 'post',
         'hierarchical' => true,
         'supports' => array( 'title', 'editor', 'thumbnail' ),
-        'taxonomies' => array( 'category', 'post_tag' ),
+        'taxonomies' => array( 'type' ),
         'has_archive' => true,
         'rewrite' => array( 'slug' => 'portfolio' )
     );

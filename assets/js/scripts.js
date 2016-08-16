@@ -78,27 +78,31 @@ jQuery(document).ready(function(){
         ]
     });
 
-
+    var category_array = [];
     $('.category-filter').on('click', function() {
 
-        var selected_category = $(this).data('category');
+        var selected_category = $(this).data('category'),
+            post_type = $(this).parent().data('post-type');
 
-        if( $(this).siblings().hasClass('active') ) {
-            $(this).siblings().removeClass('active');
-        }
-
+        // if clicked again, remove from array
         if( $(this).hasClass('active') ) {
 
             $(this).removeClass('active');
 
-            portfolio_filter( 'clear' );
+            var index = category_array.indexOf(selected_category);
+
+            if ( index > -1 ) {
+                category_array.splice(index, 1);
+            }
 
         } else {
 
             $(this).addClass('active');
 
-            portfolio_filter( selected_category );
+            category_array.push(selected_category);
         }
+
+        category_filtering( post_type, category_array );
     });
 
 

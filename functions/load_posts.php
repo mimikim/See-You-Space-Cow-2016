@@ -1,17 +1,27 @@
 <?php
-function load_posts( $category = null ) {
+function load_posts( $post_type, $category_array = null ) {
 
     $args = array(
         'posts_per_page'   => -1,
         'orderby'          => 'title',
         'order'            => 'ASC',
-        'post_type'        => 'mk_portfolio',
-        'post_status'      => 'publish',
-        'suppress_filters' => true
+        'post_type'        => $post_type,
+        'post_status'      => 'publish'
     );
 
-    if ( $category != null ) {
-        $args['cat'] = $category;
+    if ( $category_array != null ) {
+        if ( $post_type == 'post' ) {
+
+            $args['cat'] = $category_array;
+
+        } else if ( $post_type == 'mk_portfolio' ) {
+
+            $args['tax_query'][] = array(
+                'taxonomy'  => 'type',
+                'field'     => 'term_id',
+                'terms'     => $category_array
+            );
+        }
     }
 
     $results = get_posts( $args );
