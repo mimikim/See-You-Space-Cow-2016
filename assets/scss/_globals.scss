@@ -59,3 +59,14 @@ h2 {
     margin: 20px auto;
 }
 
+.ajax-loader {
+    background: url('../images/spin.svg') 0/contain no-repeat;
+    height: 60px;
+    width: 60px;
+    display: none;
+    margin:auto;
+
+    &.show {
+        display: block;
+    }
+}

@@ -1,4 +1,4 @@
-function send_contact_email(  ) {
+function send_contact_email() {
 
     $.ajax({
 

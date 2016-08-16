@@ -15,10 +15,7 @@ jQuery(document).ready(function(){
     // create rocketship
     create_rocketship();
 
-    var launch_button = $('.rocket-toggle');
-
-    $(launch_button).on('click', function() {
-
+    $('.rocket-toggle').on('click', function() {
         blast_off();
     });
 
@@ -82,6 +79,27 @@ jQuery(document).ready(function(){
     });
 
 
+    $('.category-filter').on('click', function() {
+
+        var selected_category = $(this).data('category');
+
+        if( $(this).siblings().hasClass('active') ) {
+            $(this).siblings().removeClass('active');
+        }
+
+        if( $(this).hasClass('active') ) {
+
+            $(this).removeClass('active');
+
+            portfolio_filter( 'clear' );
+
+        } else {
+
+            $(this).addClass('active');
+
+            portfolio_filter( selected_category );
+        }
+    });
 
 
     // send contact email
