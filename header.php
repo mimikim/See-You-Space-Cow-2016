@@ -13,9 +13,10 @@
 <?php get_template_part('partials/header-menu'); ?>
 <div class="wrapper">
 <?php if( is_front_page() ) : ?>
+    <div id="particles-js"></div>
     <div class="splash">
-        <div class="star-bg-two"></div>
-        <div class="star-bg"></div>
+        <!--<div class="star-bg-two"></div>
+        <div class="star-bg"></div>-->
 
         <div class="title-container">
             <div class="container">
@@ -40,8 +41,9 @@
     </div>
 <?php else : ?>
     <div class="interior-header">
-        <div class="star-bg"></div>
-        <div class="star-bg-two"></div>
+        <div id="particles-js" class="interior"></div>
+        <!--<div class="star-bg"></div>
+        <div class="star-bg-two"></div>-->
         <h1>
             <?php
                 if ( is_page() ) {
@@ -51,6 +53,7 @@
                     echo the_title();
                 }
                 else if ( is_archive() ) {
+
                     echo post_type_archive_title( );
 
                 }

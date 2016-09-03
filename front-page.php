@@ -79,7 +79,7 @@
         </div>
     </div>
 </div>
-
+<!--
 <div class="latest-posts">
     <div class="container">
         <div class="row">
@@ -111,7 +111,7 @@
                             <h3><?php echo $recent['post_title']; ?></h3>
                             <div>
                                 <div>
-                                    <em><?php echo date('M j, Y', strtotime($recent['post_date'])); ?></em>
+                                    <em><?php echo get_the_date( 'M j, Y', $recent['ID'] ); ?></em>
                                 </div>
                                 Lorem ipsum work details lorem ipsum dolor work details lorem ipsum dolor work details
                             </div>
@@ -129,6 +129,5 @@
         </div>
     </div>
 </div>
-
-
+-->
 <?php get_footer(); ?>

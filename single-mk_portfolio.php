@@ -24,11 +24,9 @@
             echo '<div class="portfolio-slider-nav">';
 
             foreach( $portfolio_images as $slide_thumbnail ) : ?>
-
                 <div class="thumbnail">
                     <img src="<?php echo $slide_thumbnail['image']['sizes']['thumbnail']; ?>" class="img-responsive">
                 </div>
-
             <?php
 
             endforeach;
@@ -36,7 +34,6 @@
             echo '</div>';
 
             endif; ?>
-
         </div>
         <div class="col-md-4 portfolio-specs">
             <?php
@@ -45,7 +42,6 @@
                 $year = get_field('year');
                 $company_name = get_field('company');
                 $company_site = get_field('company_site');
-
             ?>
             <h2>Overview</h2>
 
@@ -58,14 +54,14 @@
             <div class="spec">
                 <h3>Company:</h3> <a href="<?php echo $company_site; ?>" target="_blank"><?php echo $company_name; ?></a>
             </div>
-            <div class="spec">
+            <?php /* ?><div class="spec">
                 <h3>Tags:</h3>
                 <?php
                 if(get_the_tag_list()) {
                     echo get_the_tag_list('<ul class="taglist"><li>','</li><li>','</li></ul>');
                 }
                 ?>
-            </div>
+            </div><?php */ ?>
         </div>
     </div>
     <?php if( have_posts() ) : while ( have_posts() ) : the_post();

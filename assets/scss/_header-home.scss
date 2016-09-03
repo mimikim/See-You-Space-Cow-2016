@@ -1,9 +1,20 @@
+#particles-js {
+    background: $blue-dark;
+    height: 900px;
+    width: 100%;
+    position: absolute;
+
+    &.interior {
+        height: 300px;
+    }
+}
+
 .splash {
     padding: 100px 0 0;
     height: 900px;
-    background: $brown;
+    //background: $brown;
     color: $white;
-    background: $blue-dark;
+    //background: $blue-dark;
     position: relative;
     overflow: hidden;
 

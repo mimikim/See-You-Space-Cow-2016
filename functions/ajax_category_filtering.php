@@ -5,9 +5,9 @@ function mk_category_filtering() {
 
     $post_type = $_REQUEST['post_type'];
 
-    $results = null;
+    $sort_array = $_REQUEST['sort_array'];
 
-    $results = load_posts( $post_type, $category_array );
+    $results = load_posts( $post_type, $category_array, $sort_array );
 
     set_query_var( 'results', $results );
 

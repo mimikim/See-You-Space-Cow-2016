@@ -1,7 +1,7 @@
 .interior-header {
     position: relative;
     background: $blue-dark;
-    padding-top: 88px;
+    //padding-top: 88px;
     height: 300px;
     text-align: center;
     font-family: 'Proxima Nova Bold', sans-serif;
@@ -9,7 +9,8 @@
 
     h1 {
         font-size: 55px;
-        @include vertical-align();
+        letter-spacing: 3px;
+        @include vertical-align(65%);
     }
 
     .star-bg-two {

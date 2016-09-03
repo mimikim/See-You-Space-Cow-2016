@@ -1,10 +1,20 @@
 <?php
-function load_posts( $post_type, $category_array = null ) {
+function load_posts( $post_type, $category_array = null, $sort_array = null ) {
+
+    if ( !is_null($sort_array) ) {
+        $posts_per_page = $sort_array['posts_per_page'];
+        $order = $sort_array['order'];
+        $orderby = $sort_array['orderby'];
+    } else {
+        $posts_per_page = 15;
+        $order = 'ASC';
+        $orderby = 'title';
+    }
 
     $args = array(
-        'posts_per_page'   => -1,
-        'orderby'          => 'title',
-        'order'            => 'ASC',
+        'posts_per_page'   => $posts_per_page,
+        'order'            => $order,
+        'orderby'          => $orderby,
         'post_type'        => $post_type,
         'post_status'      => 'publish'
     );
@@ -45,15 +55,25 @@ function load_posts( $post_type, $category_array = null ) {
             $return_value .= '<div class="row">';
         }
 
-        $return_value .= '<div class="col-sm-4 portfolio-item">
+        $return_value .= '<div class="col-sm-4 archive-item">
             <a href="' . get_permalink( $result->ID ) . '">
                 <div class="image">
                     <img src="' . $thumbnail . '" class="img-responsive">
                 </div>
 
-                <h3>' . get_the_title( $result->ID ) . '</h3>
-            </a>
-        </div>';
+                <h3>' . get_the_title( $result->ID ) . '</h3>';
+
+        if ( $post_type == 'post' ) {
+            $return_value .= '<div class="archive-text">
+                <div>
+                    <em>' . get_the_date( 'M j, Y', $result->ID ) . '</em>
+                </div>
+                Lorem ipsum work details lorem ipsum dolor work details lorem ipsum dolor work details
+            </div>';
+        }
+
+        $return_value .=  '</a>
+            </div>';
 
         $count++;
 

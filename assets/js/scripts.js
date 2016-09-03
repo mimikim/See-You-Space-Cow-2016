@@ -2,10 +2,14 @@ jQuery(document).ready(function(){
 
     $ = jQuery;
 
+    var site_url = theme_url.url;
+
     menu_dropdown();
 
     $(window).scroll(header_scroll);
     header_scroll();
+
+    particlesJS.load('particles-js', site_url+'/assets/js/vendor/particles_config.json');
 
     // homepage
     $( ".splash .title" ).fadeIn( 800 );
@@ -78,11 +82,24 @@ jQuery(document).ready(function(){
         ]
     });
 
-    var category_array = [];
+    var category_array = [],
+        order_by_filter = $('#order-by-selector'),
+        show_count_filter = $('#show-count-selector'),
+        post_type = $('#index-template').data('post-type');
+
+    var order = $(order_by_filter).find(':selected').data('order'),
+        orderby = $(order_by_filter).find(':selected').data('order-by'),
+        posts_per_page = $(show_count_filter).find(':selected').data('posts-per-page');
+
+    var sort_array = {
+        'order' : order,
+        'orderby' : orderby,
+        'posts_per_page' : posts_per_page
+    };
+
     $('.category-filter').on('click', function() {
 
-        var selected_category = $(this).data('category'),
-            post_type = $(this).parent().data('post-type');
+        var selected_category = $(this).data('category');
 
         // if clicked again, remove from array
         if( $(this).hasClass('active') ) {
@@ -102,7 +119,27 @@ jQuery(document).ready(function(){
             category_array.push(selected_category);
         }
 
-        category_filtering( post_type, category_array );
+        category_filtering( post_type, sort_array, category_array );
+    });
+
+    $(order_by_filter).on('change', function() {
+
+        order = $(this).find(':selected').data('order');
+        orderby = $(this).find(':selected').data('order-by');
+
+        sort_array.order = order;
+        sort_array.orderby = orderby;
+
+        category_filtering( post_type, sort_array, category_array );
+    });
+
+    $(show_count_filter).on('change', function() {
+
+        posts_per_page = $(this).find(':selected').data('posts-per-page');
+
+        sort_array.posts_per_page = posts_per_page;
+
+        category_filtering( post_type, sort_array, category_array );
     });
 
 
@@ -148,7 +185,7 @@ jQuery(document).ready(function(){
 
             $(this).find('.error-message').empty();
 
-            /*send_contact_email( email_message, nonce );*/
+            send_contact_email( email_message, nonce );
         }
 
     });

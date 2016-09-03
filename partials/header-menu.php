@@ -17,11 +17,14 @@
     <div id="menu-overlay">
         <ul>
             <li>
-                <a href="<?php echo get_post_type_archive_link( 'mk_portfolio' ); ?>">Work</a>
+                <a href="<?php echo get_site_url() ?>">Home</a>
             </li>
             <li>
-                <a href="<?php echo get_permalink(21); ?>">Tutorials</a>
+                <a href="<?php echo get_post_type_archive_link( 'mk_portfolio' ); ?>">Portfolio</a>
             </li>
+            <!--<li>
+                <a href="<?php #echo get_permalink(21); ?>">Tutorials</a>
+            </li>-->
             <li>
                 <a href="<?php echo get_permalink(25); ?>">About</a>
             </li>
