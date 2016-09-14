@@ -43,6 +43,10 @@
         -moz-appearance: none;
         background:url('../images/dropdown-select.png') right 10px center/10px no-repeat;
     }
+
+    select::-ms-expand {
+        display: none;
+    }
 }
 
 .category-filter {
