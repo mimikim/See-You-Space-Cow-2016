@@ -49,7 +49,7 @@ function load_posts( $post_type, $category_array = null, $sort_array = null ) {
     }
 
     foreach( $results as $result ) {
-        $thumbnail = get_featured_image( $result->ID );
+        $thumbnail = get_featured_image( $result->ID, 'full' );
 
         if($count == 0) {
             $return_value .= '<div class="row">';

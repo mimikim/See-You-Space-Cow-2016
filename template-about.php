@@ -10,7 +10,7 @@ get_header(); ?>
 
             <div class="links">
                 <a href="<?php echo get_post_type_archive_link( 'mk_portfolio' ); ?>" class="btn">See My Portfolio</a>
-                <a href="<?php echo get_permalink(21); ?>" class="btn">Read Blog Tutorials</a>
+               <!-- <a href="<?php #echo get_permalink(21); ?>" class="btn">Read Blog Tutorials</a>-->
                 <a href="<?php echo get_permalink(11); ?>" class="btn">Contact me!</a>
             </div>
         </div>
