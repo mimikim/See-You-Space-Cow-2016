@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" />
-    <title><?php echo get_bloginfo('title'); ?></title>
+    <title><?php echo wp_title(); ?></title>
     <?php wp_head(); ?>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
