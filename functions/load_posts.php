@@ -6,7 +6,7 @@ function load_posts( $post_type, $category_array = null, $sort_array = null ) {
         $order = $sort_array['order'];
         $orderby = $sort_array['orderby'];
     } else {
-        $posts_per_page = 15;
+        $posts_per_page = -1;
         $order = 'ASC';
         $orderby = 'title';
     }
@@ -35,13 +35,9 @@ function load_posts( $post_type, $category_array = null, $sort_array = null ) {
     }
 
     $results = get_posts( $args );
-
     $total_count = count( $results );
-
     $end_of_posts_flag = false;
-
     $count = 0;
-
     $return_value = null;
 
     if ( $total_count % 3 != 0 ) {

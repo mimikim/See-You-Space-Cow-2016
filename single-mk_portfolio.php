@@ -4,35 +4,24 @@
         <div class="col-md-8">
             <?php
             $portfolio_images = get_field('portfolio_images');
-
             if ( !empty($portfolio_images) ) :
+                echo '<div class="portfolio-slider-for">';
+                foreach( $portfolio_images as $slide ) : ?>
+                    <div class="image">
+                        <img src="<?php echo $slide['image']['url']; ?>" class="img-responsive">
+                    </div>
+                <?php
+                endforeach;
 
-            echo '<div class="portfolio-slider-for">';
-
-            foreach( $portfolio_images as $slide ) : ?>
-
-                <div class="image">
-                    <img src="<?php echo $slide['image']['url']; ?>" class="img-responsive">
-                </div>
-
-            <?php
-
-            endforeach;
-
-            echo '</div>';
-
-            echo '<div class="portfolio-slider-nav">';
-
-            foreach( $portfolio_images as $slide_thumbnail ) : ?>
-                <div class="thumbnail">
-                    <img src="<?php echo $slide_thumbnail['image']['sizes']['thumbnail']; ?>" class="img-responsive">
-                </div>
-            <?php
-
-            endforeach;
-
-            echo '</div>';
-
+                echo '</div>';
+                echo '<div class="portfolio-slider-nav">';
+                foreach( $portfolio_images as $slide_thumbnail ) : ?>
+                    <div class="thumbnail">
+                        <img src="<?php echo $slide_thumbnail['image']['sizes']['thumbnail']; ?>" class="img-responsive">
+                    </div>
+                <?php
+                endforeach;
+                echo '</div>';
             endif; ?>
         </div>
         <div class="col-md-4 portfolio-specs">
@@ -72,7 +61,6 @@
     <div class="row">
         <div class="col-md-12 additional-details">
             <h2>Additional Details:</h2>
-
             <?php the_content(); ?>
         </div>
     </div>

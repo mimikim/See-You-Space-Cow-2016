@@ -4,6 +4,15 @@ jQuery(document).ready(function(){
 
     var site_url = theme_url.url;
 
+    $('.ga-tracking').on('click', function() {
+        ga('send', {
+            hitType: 'event',
+            eventCategory: $(this).data('event-category'),
+            eventAction: $(this).data('event-action'),
+            eventLabel: $(this).data('event-label')
+        });
+    });
+
     menu_dropdown();
 
     $(window).scroll(header_scroll);
@@ -103,19 +112,13 @@ jQuery(document).ready(function(){
 
         // if clicked again, remove from array
         if( $(this).hasClass('active') ) {
-
             $(this).removeClass('active');
-
             var index = category_array.indexOf(selected_category);
-
             if ( index > -1 ) {
                 category_array.splice(index, 1);
             }
-
         } else {
-
             $(this).addClass('active');
-
             category_array.push(selected_category);
         }
 
@@ -123,22 +126,16 @@ jQuery(document).ready(function(){
     });
 
     $(order_by_filter).on('change', function() {
-
         order = $(this).find(':selected').data('order');
         orderby = $(this).find(':selected').data('order-by');
-
         sort_array.order = order;
         sort_array.orderby = orderby;
-
         category_filtering( post_type, sort_array, category_array );
     });
 
     $(show_count_filter).on('change', function() {
-
         posts_per_page = $(this).find(':selected').data('posts-per-page');
-
         sort_array.posts_per_page = posts_per_page;
-
         category_filtering( post_type, sort_array, category_array );
     });
 
@@ -162,29 +159,19 @@ jQuery(document).ready(function(){
         };
 
         $(input).each(function() {
-
             if( $(this).val().length === 0 ) {
-
                 $(this).addClass('error');
-
             } else {
-
                 $(this).removeClass('error');
             }
         });
 
         if ( $(input).hasClass('error') ) {
-
             $(this).find('.error-message').html('Please fill out all marked fields!');
-
         } else if( !validate_email(email) ) {
-
             $(this).find('.error-message').html('Please enter a valid email address!');
-
         } else {
-
             $(this).find('.error-message').empty();
-
             send_contact_email( email_message, nonce );
         }
 

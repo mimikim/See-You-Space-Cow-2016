@@ -2,7 +2,6 @@
 
 // return featured image url
 function get_featured_image( $id, $size = 'full' ) {
-
     if (has_post_thumbnail( $id ) ) {
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), $size );
         return $image[0];
@@ -13,7 +12,6 @@ function get_featured_image( $id, $size = 'full' ) {
 
 // add acf option field
 if( function_exists('acf_add_options_page') ) {
-
     acf_add_options_page();
 }
 
@@ -27,7 +25,6 @@ function mk_remove_from_admin() {
     remove_menu_page( 'edit-comments.php' );
 }
 add_action( 'admin_menu', 'mk_remove_from_admin' );
-
 
 function get_ip_address(){
     foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR') as $key){

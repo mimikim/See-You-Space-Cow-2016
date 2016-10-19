@@ -25,6 +25,5 @@ function mk_portfolio_taxonomy() {
     );
 
     register_taxonomy('type', array('mk_portfolio'), $args);
-
 }
 add_action( 'init', 'mk_portfolio_taxonomy' );

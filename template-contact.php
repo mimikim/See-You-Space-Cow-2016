@@ -1,18 +1,15 @@
 <?php /* Template Name: Contact Page */
 get_header(); ?>
-
 <div class="container">
     <div class="row">
         <div class="col-sm-7">
-
             <div class="contact-form-header">
                 <h2>Standing by for your broadcast</h2>
                 Submit the form below and watch the rocket ship launch into space!
                 <div class="small">
-                    Or just <span class="rocket-toggle">click here</span> to see the animation ;)
+                    Or just <span class="rocket-toggle ga-tracking" data-event-category="Contact Page" data-event-action="Clicked Text Link" data-event-label="">click here</span> to see the animation ;)
                 </div>
             </div>
-
             <form id="contact-form">
                 <div>
                     <label for="name">Name</label>
@@ -26,12 +23,9 @@ get_header(); ?>
                     <label for="message">Message</label>
                     <textarea name="message" id="contact-message" placeholder="Your Message Here"></textarea>
                 </div>
-
                 <div class="error-message"></div>
-
-                <input type="submit" class="btn btn-submit" value="Blast Off!" data-nonce="<?php echo wp_create_nonce('contact-email-form' ); ?>">
+                <input type="submit" class="btn btn-submit ga-tracking" value="Blast Off!" data-nonce="<?php echo wp_create_nonce('contact-email-form' ); ?>" data-event-category="Contact Form" data-event-action="Form Button Clicked" data-event-label="">
             </form>
-
         </div>
         <div class="col-sm-5">
             <div class="rocket-container">
@@ -44,5 +38,4 @@ get_header(); ?>
         </div>
     </div>
 </div>
-
 <?php get_footer(); ?>
