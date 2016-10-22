@@ -5,7 +5,7 @@ get_header(); ?>
         <div class="col-sm-7">
             <div class="contact-form-header">
                 <h2>Standing by for your broadcast</h2>
-                Submit the form below and watch the rocket ship launch into space!
+                <span class="text">Submit the form below and watch the rocket ship launch into space!</span>
                 <div class="small">
                     Or just <span class="rocket-toggle ga-tracking" data-event-category="Contact Page" data-event-action="Clicked Text Link" data-event-label="">click here</span> to see the animation ;)
                 </div>

@@ -40,10 +40,10 @@
             <div class="spec">
                 <h3>Year:</h3> <?php echo $year; ?>
             </div>
-            <div class="spec">
+            <?php /* ?><div class="spec">
                 <h3>Company:</h3> <a href="<?php echo $company_site; ?>" target="_blank"><?php echo $company_name; ?></a>
             </div>
-            <?php /* ?><div class="spec">
+            <div class="spec">
                 <h3>Tags:</h3>
                 <?php
                 if(get_the_tag_list()) {
@@ -54,7 +54,6 @@
         </div>
     </div>
     <?php if( have_posts() ) : while ( have_posts() ) : the_post();
-
         $content = get_the_content();
         if ( !empty($content) ) :
     ?>

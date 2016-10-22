@@ -8,8 +8,8 @@
 @import 'globals';
 
 // components
-@import 'animations';
-@import 'graphics';
+@import 'animations/animations';
+@import 'graphics/graphics';
 @import 'form';
 @import 'buttons';
 
@@ -26,21 +26,3 @@
 @import 'page-about';
 @import 'page-contact';
 @import 'single-portfolio';
-
-
-// responsive
-@import 'responsive/header-home';
-@import 'responsive/page-home';
-@import 'responsive/page-about';
-@import 'responsive/page-contact';
-@import 'responsive/single-portfolio';
-
-@import 'responsive/header';
-@import 'responsive/footer';
-@import 'responsive/page';
-@import 'responsive/archive';
-
-//@import 'form';
-@import 'responsive/buttons';
-
-//@import 'globals';

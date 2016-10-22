@@ -11,7 +11,6 @@ var jshint       = require('gulp-jshint'),
     imagemin     = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer');
 
-
 // Images
 gulp.task('images', function() {
     return gulp.src('assets/images/**')
@@ -20,22 +19,11 @@ gulp.task('images', function() {
         .pipe(gulp.dest('dist/images'));
 });
 
-// Lint Task
-gulp.task('lint', function() {
-    return gulp.src('assets/js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
-
 // Compile Our Sass
 gulp.task('sass', function() {
     // ignore vendor plugins
-    gulp.src(['assets/scss/vendor/**']).pipe(gulp.dest('dist/css/vendor'));
-
-    gulp.src('assets/scss/ie/*.scss')
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(rename('ie.min.css'))
-        .pipe(gulp.dest('dist/css'));
+    gulp.src(['assets/scss/vendor/**'])
+        .pipe(gulp.dest('dist/css/vendor'));
 
     return gulp.src('assets/scss/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
@@ -45,13 +33,20 @@ gulp.task('sass', function() {
         }))
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('dist/css'));
+});
 
+// Lint Task
+gulp.task('lint', function() {
+    return gulp.src('assets/js/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
 });
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-
-    gulp.src(['assets/js/vendor/**']).pipe(gulp.dest('dist/js/vendor'));
+    gulp.src(['assets/js/vendor/*.js'])
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js/vendor'));
 
     return gulp.src('assets/js/*.js')
         .pipe(concat('all.js'))
@@ -60,18 +55,12 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-// Transfer Font Directories
-gulp.task('fonts', function() {
-    gulp.src(['assets/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
-});
-
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('assets/js/*.js', ['lint', 'scripts']);
     gulp.watch('assets/scss/**', ['sass']);
     gulp.watch('assets/images/**', ['images']);
-    gulp.watch('assets/fonts/**', ['fonts']);
 });
 
 // Default Task
-gulp.task('default', ['images', 'lint', 'sass', 'scripts', 'watch', 'fonts']);
+gulp.task('default', ['images', 'lint', 'sass', 'scripts', 'watch']);

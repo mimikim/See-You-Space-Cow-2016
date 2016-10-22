@@ -4,7 +4,6 @@
 
 .category-container {
     margin-bottom: 10px;
-
     .title {
         font-family: 'Proxima Nova Bold';
         text-transform: uppercase;
@@ -15,11 +14,11 @@
 }
 
 .selector-container {
-    text-align: right;
+    text-align: left;
 }
 
 .selector-dropdown {
-    display:inline-block;
+    display: block;
     margin: 0 10px 20px 0;
     font-size: 16px;
 
@@ -28,10 +27,10 @@
     }
 
     span {
+        display: block;
         text-transform: uppercase;
         font-family: 'Proxima Nova Bold';
         letter-spacing: 2px;
-        //vertical-align: top;
     }
 
     select {
@@ -42,10 +41,6 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         background:url('../images/dropdown-select.png') right 10px center/10px no-repeat;
-    }
-
-    select::-ms-expand {
-        display: none;
     }
 }
 
@@ -109,15 +104,44 @@
         border: 4px solid $blue;
         border-radius: 10px;
         overflow: hidden;
-
-        img {
-            //height: 200px;
-            width: auto;
-        }
     }
 }
 
 .archive-text {
     font-size: 16px;
     color: $black;
+}
+
+.stickied {
+    position: absolute;
+    background: black;
+    border-radius: 10px 0 10px 0;
+    padding: 5px;
+    font-size: 20px;
+    color: $yellow;
+}
+
+@media screen and ( min-width: $screen-sm-min ) {
+    .selector-container {
+        text-align: right;
+    }
+
+    .selector-dropdown {
+        display:inline-block;
+
+        span {
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and ( min-width: $screen-lg-min ) {
+    .archive-item {
+        .image {
+            img {
+                height: 200px;
+                width: 100%;
+            }
+        }
+    }
 }

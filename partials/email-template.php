@@ -1,11 +1,7 @@
 <?php
-
 $user_ID = get_current_user_id();
-
 $ip = get_ip_address();
-
 $date = date('F j, Y H:i:s');
-
 $admin_email = get_option('admin_email');
 
 $headers = array(
@@ -17,7 +13,6 @@ $subject = 'Thanks for your form submission!';
 $admin_subject = 'New Form Submission from ' . $email_message['name'] . ', ' . $email_message['email'];
 
 ob_start(); ?>
-
     <!DOCTYPE HTML>
     <html>
     <head>
@@ -25,16 +20,13 @@ ob_start(); ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <style type="text/css">
-
             td {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 18px;
                 line-height: 1.5;
                 color: #222222;
             }
-
             @media only screen and ( max-width: 480px ) {
-
                 body[yahoo] td.content {
                     display: block !important;
                     padding: 0 !important;
@@ -58,12 +50,10 @@ ob_start(); ?>
                     width: 300px !important;
                     height: 2px !important;
                 }
-
             }
         </style>
     </head>
     <body yahoo="fix" style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 1.5; background: #d3d3d3; color: #222222; -webkit-text-size-adjust: none;">
-
     <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#d3d3d3">
         <tr>
             <td valign="top" align="center">
@@ -194,12 +184,10 @@ ob_start(); ?>
     </table>
     </body>
     </html>
-
 <?php $content = ob_get_contents(); ob_end_clean();
 echo wp_mail($email_message['email'], $subject, $content, $headers);
 
 ob_start(); ?>
-
     <!DOCTYPE HTML>
     <html>
     <head>
@@ -207,16 +195,13 @@ ob_start(); ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <style type="text/css">
-
             td {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 16px;
                 line-height: 1.5;
                 color: #222222;
             }
-
             @media only screen and ( max-width: 480px ) {
-
                 body[yahoo] td.content {
                     display: block !important;
                     padding: 0 !important;
@@ -231,7 +216,6 @@ ob_start(); ?>
         </style>
     </head>
     <body yahoo="fix" style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.5; background: #ffffff; color: #222222; -webkit-text-size-adjust: none;">
-
     <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff">
         <tr>
             <td valign="top" align="center">
@@ -281,8 +265,5 @@ ob_start(); ?>
     </table>
     </body>
     </html>
-
 <?php $admin_content = ob_get_contents(); ob_end_clean();
-
-echo wp_mail($admin_email, $admin_subject, $admin_content, $headers);
-?>
+echo wp_mail($admin_email, $admin_subject, $admin_content, $headers); ?>

@@ -1,14 +1,13 @@
 .interior-header {
     position: relative;
     background: $blue-dark;
-    //padding-top: 88px;
     height: 300px;
     text-align: center;
     font-family: 'Proxima Nova Bold', sans-serif;
     color: $white;
 
     h1 {
-        font-size: 55px;
+        font-size: 40px;
         letter-spacing: 3px;
         @include vertical-align(65%);
     }
@@ -19,5 +18,17 @@
 }
 
 .body-content {
-    padding: 50px 0 100px;
+    padding: 20px 0 50px;
+}
+
+@media screen and ( min-width: $screen-sm-min ) {
+    .interior-header {
+        h1 {
+            font-size: 55px;
+        }
+    }
+
+    .body-content {
+        padding: 50px 0 100px;
+    }
 }

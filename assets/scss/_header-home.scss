@@ -12,15 +12,17 @@
 .splash {
     padding: 100px 0 0;
     height: 900px;
-    //background: $brown;
     color: $white;
-    //background: $blue-dark;
     position: relative;
     overflow: hidden;
 
     .cow-container {
         position: relative;
         @include animation( floating-cow 5s linear infinite alternate );
+
+        canvas {
+            width: 100%;
+        }
     }
 }
 
@@ -37,7 +39,7 @@
         text-shadow: 2px 2px 5px $black;
 
         h1 {
-            font-size: 78px;
+            font-size: 14vw;
             letter-spacing: 6px;
             text-transform: lowercase;
             margin-top: -60px;
@@ -79,4 +81,42 @@
     background-image: -webkit-linear-gradient(rgba(25,6,41,0),#190629);
     background-image: linear-gradient(rgba(25,6,41,0),#191f42);
     z-index:2;
+}
+
+@media screen and ( max-width: 560px ) {
+
+    .title-container {
+        .title {
+            h1 {
+                letter-spacing: 3px;
+            }
+        }
+    }
+
+    .splash {
+        .cow-container {
+            top: 50px;
+            @include animation( none );
+
+        }
+    }
+}
+
+@media screen and ( min-width: $screen-xs-min ) {
+    .title-container {
+        .title {
+            h1 {
+                font-size: 78px;
+            }
+        }
+    }
+
+    .splash {
+        .cow-container {
+            canvas {
+                width: auto;
+                width: initial;
+            }
+        }
+    }
 }

@@ -21,7 +21,7 @@
                     Highly customized, clean Wordpress themes built with an end-user's experience in mind.
                 </p>
             </div>
-            <div class="col-md-4 specialties">
+            <div class="col-sm-4 specialties">
                 <div class="cow-face"></div>
                 <h3>HTML/CSS/JS</h3>
                 <p>
@@ -30,7 +30,7 @@
                     Straight HTML pages. Old school, without reliance on a CMS, but still just as modern.
                 </p>
             </div>
-            <div class="col-md-4 specialties">
+            <div class="col-sm-4 specialties">
                 <div class="cow-face"></div>
                 <h3>Responsive Emails</h3>
                 <p>
@@ -54,7 +54,7 @@
                     ?>
                     <div class="slide">
                         <a href="<?php echo get_permalink($p['portfolio_item']->ID); ?>">
-                            <?php $thumbnail = get_featured_image( $p['portfolio_item']->ID ); ?>
+                            <?php $thumbnail = get_featured_image( $p['portfolio_item']->ID, 'medium_large' ); ?>
                             <img src="<?php echo $thumbnail; ?>" class="img-responsive">
                             <div>
 

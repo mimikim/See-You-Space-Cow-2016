@@ -1,5 +1,4 @@
 <?php
-
 // return featured image url
 function get_featured_image( $id, $size = 'full' ) {
     if (has_post_thumbnail( $id ) ) {
@@ -14,7 +13,6 @@ function get_featured_image( $id, $size = 'full' ) {
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_page();
 }
-
 
 function register_menu() {
     register_nav_menu('primary-menu',__( 'Primary Menu' ));

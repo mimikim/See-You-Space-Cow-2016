@@ -1,6 +1,5 @@
 <?php
 function mk_register_portfolio() {
-
     $labels = array(
         'name' => 'Portfolio',
         'singular_name' => 'Portfolio',
@@ -14,6 +13,7 @@ function mk_register_portfolio() {
         'not_found_in_trash' => 'No Portfolio Item Found in Trash',
         'menu_name' => 'Portfolio'
     );
+
     $args = array(
         'labels' => $labels,
         'description' => '',
@@ -33,6 +33,5 @@ function mk_register_portfolio() {
         'rewrite' => array( 'slug' => 'portfolio' )
     );
     register_post_type( 'mk_portfolio', $args );
-
 }
 add_action('init', 'mk_register_portfolio');

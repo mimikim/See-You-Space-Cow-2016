@@ -5,23 +5,19 @@
     h2 {
         margin-bottom: 20px;
     }
-}
 
-.contact-cow {
-    float: left;
-
-    .cow-head {
-        position: relative;
-        right: inherit;
+    .text, .small {
+        display: none;
     }
 }
 
 .rocket-container {
     position: relative;
-    height: 700px;
+    display: none;
 
     .canvas-container {
-        position: absolute;
+        position: relative;
+        text-align: center;
 
         &.blast-off {
             @include animation(rocket-blastoff 5s linear);
@@ -37,5 +33,44 @@
 
     &:hover, &:active, &:focus {
         color: $yellow-light;
+    }
+}
+
+#rocket-canvas {
+    width: 100%;
+}
+
+@media screen and ( min-width: $screen-xs-min ) {
+    #rocket-canvas {
+        width: inherit;
+    }
+}
+
+@media screen and ( min-width: $screen-sm-min ) {
+    .contact-form-header {
+        .text, .small {
+            display: block;
+        }
+    }
+
+    #rocket-canvas {
+        width: 100%;
+    }
+
+    .rocket-container {
+        display: block;
+        height: 500px;
+        margin-top: 150px;
+
+        .canvas-container {
+            position: absolute;
+        }
+    }
+}
+
+@media screen and ( min-width: $screen-md-min ) {
+    .rocket-container {
+        height: 700px;
+        margin-top: 0;
     }
 }

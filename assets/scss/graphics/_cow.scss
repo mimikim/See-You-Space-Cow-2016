@@ -7,7 +7,15 @@
     background: url('../images/harvestmoon-cow-tail-wag.png') 0 100% no-repeat;
     height: 132px;
     width: 162px;
-    float: right;
-    margin-left: 20px;
+    float: none;
+    margin: 0 auto 20px;
     @include animation( hm-cow-happy 1s steps(2) infinite );
+}
+
+
+@media screen and ( min-width: $screen-sm-min ) {
+    .hm-cow-happy {
+        float: right;
+        margin-left: 20px;
+    }
 }

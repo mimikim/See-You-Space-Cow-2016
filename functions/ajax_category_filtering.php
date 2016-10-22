@@ -1,6 +1,5 @@
 <?php
 function mk_category_filtering() {
-
     $category_array = $_REQUEST['category_array'];
     $post_type = $_REQUEST['post_type'];
     $sort_array = $_REQUEST['sort_array'];

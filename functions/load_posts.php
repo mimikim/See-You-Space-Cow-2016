@@ -21,11 +21,8 @@ function load_posts( $post_type, $category_array = null, $sort_array = null ) {
 
     if ( $category_array != null ) {
         if ( $post_type == 'post' ) {
-
             $args['cat'] = $category_array;
-
         } else if ( $post_type == 'mk_portfolio' ) {
-
             $args['tax_query'][] = array(
                 'taxonomy'  => 'type',
                 'field'     => 'term_id',
@@ -53,11 +50,10 @@ function load_posts( $post_type, $category_array = null, $sort_array = null ) {
 
         $return_value .= '<div class="col-sm-4 archive-item">
             <a href="' . get_permalink( $result->ID ) . '">
-                <div class="image">
-                    <img src="' . $thumbnail . '" class="img-responsive">
-                </div>
-
-                <h3>' . get_the_title( $result->ID ) . '</h3>';
+            <div class="image">
+                <img src="' . $thumbnail . '" class="img-responsive">
+            </div>
+            <h3>' . get_the_title( $result->ID ) . '</h3>';
 
         if ( $post_type == 'post' ) {
             $return_value .= '<div class="archive-text">
@@ -74,17 +70,13 @@ function load_posts( $post_type, $category_array = null, $sort_array = null ) {
         $count++;
 
         if( ($total_count == 1) && ($end_of_posts_flag == true) ) {
-
             $return_value .= '</div>';
-
         } elseif ($count == 3)  {
-
             $return_value .= '</div>';
             $count = 0;
         }
 
         $total_count--;
     }
-
     return $return_value;
 }

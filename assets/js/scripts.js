@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
     $(window).scroll(header_scroll);
     header_scroll();
 
-    particlesJS.load('particles-js', site_url+'/assets/js/vendor/particles_config.json');
+    particlesJS.load('particles-js', site_url+'/assets/js/vendor/particles_config.min.json');
 
     // homepage
     $( ".splash .title" ).fadeIn( 800 );

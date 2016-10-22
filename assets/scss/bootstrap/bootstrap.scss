@@ -1,8 +1,6 @@
-/*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+//Bootstrap v3.3.7 (http://getbootstrap.com)
+//Copyright 2011-2016 Twitter, Inc.
+//Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 // Core variables and mixins
 @import "variables";
@@ -11,27 +9,27 @@
 // Reset and dependencies
 @import "normalize";
 @import "print";
-@import "glyphicons";
+//@import "glyphicons";
 
 // Core CSS
 @import "scaffolding";
 @import "type";
 @import "code";
 @import "grid";
-@import "tables";
-@import "forms";
+//@import "tables";
+//@import "forms";
 @import "buttons";
 
 // Components
 @import "component-animations";
 //@import "dropdowns";
-@import "button-groups";
-@import "input-groups";
-@import "navs";
-@import "navbar";
-@import "breadcrumbs";
-@import "pagination";
-@import "pager";
+//@import "button-groups";
+//@import "input-groups";
+//@import "navs";
+//@import "navbar";
+//@import "breadcrumbs";
+//@import "pagination";
+//@import "pager";
 //@import "labels";
 //@import "badges";
 //@import "jumbotron";
@@ -46,10 +44,10 @@
 //@import "close";
 
 // Components w/ JavaScript
-@import "modals";
+//@import "modals";
 //@import "tooltip";
 //@import "popovers";
-@import "carousel";
+//@import "carousel";
 
 // Utility classes
 @import "utilities";

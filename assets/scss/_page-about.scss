@@ -1,25 +1,69 @@
 .profile-image {
+    display: none;
     float: left;
     margin: 0 20px 10px 0;
+    width: 200px;
 }
 
 .about-profile {
-    font-size:35px;
+    font-size: 25px;
+    margin-bottom: 30px;
 
     p {
-        text-indent: 60px;
         margin-bottom: 50px;
+        text-indent: 0;
     }
 
     .links {
         margin-top: 100px;
 
         .btn {
-            margin: 0 30px 20px 0;
-
+            width: 100%;
+            margin: 0 auto 40px;
             &:last-of-type {
                 margin-right: 0;
             }
         }
+    }
+}
+
+@media screen and ( min-width: 560px ) {
+    .about-profile {
+        margin-bottom: 0;
+
+        p {
+            text-indent: 60px;
+        }
+    }
+
+    .profile-image {
+        display: block;
+    }
+}
+
+@media screen and ( min-width: $screen-sm-min ) {
+    .about-profile {
+        font-size: 28px;
+        .links {
+            .btn {
+                margin: 0 30px 20px 0;
+                width: inherit;
+            }
+        }
+    }
+
+    .profile-image {
+        width: 250px;
+    }
+}
+
+@media screen and ( min-width: $screen-md-min ) {
+    .about-profile {
+        font-size:35px;
+    }
+
+    .profile-image {
+        width: auto;
+        width: initial;
     }
 }

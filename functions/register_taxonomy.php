@@ -1,6 +1,5 @@
 <?php
 function mk_portfolio_taxonomy() {
-
     $labels = array(
         'name' => _x('Item Type', 'taxonomy general name'),
         'singular_name' => _x('Item Type', 'taxonomy singular name'),
