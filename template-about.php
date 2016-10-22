@@ -4,7 +4,7 @@ get_header(); ?>
     <div class="row">
         <div class="col-md-12 about-profile">
             <?php $thumbnail = get_featured_image( $post->ID ); ?>
-            <img src="<?php echo $thumbnail; ?>" class="img-responsive profile-image">
+            <img src="<?php echo $thumbnail; ?>" class="img-responsive profile-image" alt="My Face">
             <?php echo get_the_content(); ?>
             <div class="links">
                 <a href="<?php echo get_post_type_archive_link( 'mk_portfolio' ); ?>" class="btn">See My Portfolio</a>

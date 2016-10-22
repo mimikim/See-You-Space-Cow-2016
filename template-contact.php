@@ -12,15 +12,15 @@ get_header(); ?>
             </div>
             <form id="contact-form">
                 <div>
-                    <label for="name">Name</label>
+                    <label for="contact-name">Name</label>
                     <input type="text" id="contact-name" placeholder="Your Name">
                 </div>
                 <div>
-                    <label for="email">Email</label>
+                    <label for="contact-email">Email</label>
                     <input type="text" id="contact-email" placeholder="Your Email">
                 </div>
                 <div>
-                    <label for="message">Message</label>
+                    <label for="contact-message">Message</label>
                     <textarea name="message" id="contact-message" placeholder="Your Message Here"></textarea>
                 </div>
                 <div class="error-message"></div>

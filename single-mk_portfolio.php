@@ -8,7 +8,7 @@
                 echo '<div class="portfolio-slider-for">';
                 foreach( $portfolio_images as $slide ) : ?>
                     <div class="image">
-                        <img src="<?php echo $slide['image']['url']; ?>" class="img-responsive">
+                        <img src="<?php echo $slide['image']['url']; ?>" class="img-responsive" alt="Portfolio Item Image">
                     </div>
                 <?php
                 endforeach;
@@ -17,7 +17,7 @@
                 echo '<div class="portfolio-slider-nav">';
                 foreach( $portfolio_images as $slide_thumbnail ) : ?>
                     <div class="thumbnail">
-                        <img src="<?php echo $slide_thumbnail['image']['sizes']['thumbnail']; ?>" class="img-responsive">
+                        <img src="<?php echo $slide_thumbnail['image']['sizes']['thumbnail']; ?>" class="img-responsive" alt="Portfolio Item Thumbnail">
                     </div>
                 <?php
                 endforeach;

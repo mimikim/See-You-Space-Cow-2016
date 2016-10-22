@@ -55,7 +55,7 @@
                     <div class="slide">
                         <a href="<?php echo get_permalink($p['portfolio_item']->ID); ?>">
                             <?php $thumbnail = get_featured_image( $p['portfolio_item']->ID, 'medium_large' ); ?>
-                            <img src="<?php echo $thumbnail; ?>" class="img-responsive">
+                            <img src="<?php echo $thumbnail; ?>" class="img-responsive" alt="Portfolio Item: <?php echo $p['portfolio_item']->post_title; ?>">
                             <div>
 
                                 <h3><?php echo $p['portfolio_item']->post_title; ?></h3>

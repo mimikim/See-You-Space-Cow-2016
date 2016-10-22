@@ -51,7 +51,7 @@ function load_posts( $post_type, $category_array = null, $sort_array = null ) {
         $return_value .= '<div class="col-sm-4 archive-item">
             <a href="' . get_permalink( $result->ID ) . '">
             <div class="image">
-                <img src="' . $thumbnail . '" class="img-responsive">
+                <img src="' . $thumbnail . '" class="img-responsive" alt="Portfolio Item: ' . get_the_title( $result->ID ) . '">
             </div>
             <h3>' . get_the_title( $result->ID ) . '</h3>';
 

@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="planet-half">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/planet-half.svg" class="img-responsive planet">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/planet-half.svg" class="img-responsive planet" alt="Planet Image">
         </div>
         <div class="planet-half-overlay"></div>
     </div>
