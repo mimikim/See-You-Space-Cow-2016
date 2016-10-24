@@ -1,9 +1,6 @@
-$ = jQuery;
-
 jQuery(document).ready(function(){
 
-    var site_url    = theme_url.url,
-        window_url  = window.location.href;
+    $ = jQuery;
 
     $('.ga-tracking').on('click', function() {
         ga('send', {
@@ -14,22 +11,9 @@ jQuery(document).ready(function(){
         });
     });
 
-    menu_dropdown();
-
-    $(window).scroll(header_scroll);
-    header_scroll();
-
-    particlesJS.load('particles-js', site_url+'/assets/js/vendor/particles_config.min.json');
-
-    // homepage
-    $( ".splash .title" ).fadeIn( 800 );
-
-    canvas_cow.load();
-    canvas_rocketship.load();
-
-    $('.rocket-toggle').on('click', function() {
-        canvas_rocketship.blast_off();
-    });
+    mk_header.init();
+    canvas_cow.init();
+    canvas_rocketship.init();
 
 
     if( $('.homepage-slider').length ) {

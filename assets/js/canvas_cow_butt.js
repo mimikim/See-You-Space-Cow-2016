@@ -18,29 +18,26 @@ var canvas_cow = canvas_cow || (function(){
 
         if (cow_canvas !== null && cow_canvas.getContext){
             var cow = cow_canvas.getContext('2d');
-            cow_butt( cow, attrs );
+            cow_butt( cow_canvas, cow, attrs );
             cow_butt_eyes( cow, attrs, false );
 
             setInterval(function() {
                 // clear canvas before drawing again
-                cow_clear( cow );
-                cow_butt( cow, attrs );
+                cow_clear( cow_canvas, cow );
+                cow_butt( cow_canvas, cow, attrs );
                 cow_butt_eyes( cow, attrs, eyes_open );
                 eyes_open = !eyes_open;
             }, 1000);
         }
     }
 
-    function cow_clear( cow ) {
-        var cow_canvas = document.getElementById('cow-butthole');
-        // clear canvas to ensure layered animation is clear
+    // clear canvas to ensure layered animation is clear
+    function cow_clear( cow_canvas, cow ) {
         cow.clearRect(0, 0, cow_canvas.width, cow_canvas.height );
     }
 
-    function cow_butt( cow, style ) {
-        var cow_canvas = document.getElementById('cow-butthole');
-        cow.clearRect(0, 0, cow_canvas.width, cow_canvas.height );
-
+    function cow_butt( cow_canvas, cow, style ) {
+        cow_clear( cow_canvas, cow );
         // helmet
         cow.save();
         cow.rotate(-50*Math.PI/180);
@@ -253,6 +250,6 @@ var canvas_cow = canvas_cow || (function(){
     }
 
     return {
-        load : load_cow_butt
+        init : load_cow_butt
     };
 })();
