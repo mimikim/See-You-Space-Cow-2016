@@ -4,7 +4,6 @@ jQuery(document).ready(function(){
 
     canvas_cow.init();
     canvas_rocketship.init();
-
     mk_analytics.init();
     mk_header.init();
     mk_sliders.init();

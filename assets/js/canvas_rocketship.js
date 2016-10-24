@@ -38,16 +38,12 @@ var canvas_rocketship = canvas_rocketship || (function() {
             rocket.arc(200, 200, 60, 0, 2*Math.PI);
             rocket.fillStyle = '#fff';
             rocket.fill();
-            rocket.lineWidth = attrs.line_width;
-            rocket.strokeStyle = attrs.stroke_color;
             rocket.stroke();
 
             rocket.beginPath();
             rocket.arc(200, 200, 40, 0, 2*Math.PI);
             rocket.fillStyle = '#fff';
             rocket.fill();
-            rocket.lineWidth = attrs.line_width;
-            rocket.strokeStyle = attrs.stroke_color;
             rocket.stroke();
 
             // rocket wings
@@ -60,8 +56,6 @@ var canvas_rocketship = canvas_rocketship || (function() {
             rocket.closePath();
             rocket.fillStyle = attrs.rocket_body;
             rocket.fill();
-            rocket.lineWidth = attrs.line_width;
-            rocket.strokeStyle = attrs.stroke_color;
             rocket.stroke();
         }
     }
@@ -77,8 +71,6 @@ var canvas_rocketship = canvas_rocketship || (function() {
             rocket.closePath();
             rocket.fillStyle = 'orange';
             rocket.fill();
-            rocket.lineWidth = attrs.line_width;
-            rocket.strokeStyle = attrs.stroke_color;
             rocket.stroke();
 
             rocket.beginPath();
@@ -89,8 +81,32 @@ var canvas_rocketship = canvas_rocketship || (function() {
             rocket.closePath();
             rocket.fillStyle = 'yellow';
             rocket.fill();
-            rocket.lineWidth = attrs.line_width;
-            rocket.strokeStyle = attrs.stroke_color;
+            rocket.stroke();
+
+            // backpack
+            rocket.beginPath();
+            rocket.moveTo(75, 250);
+            rocket.quadraticCurveTo(170, 320, 314, 340);
+            rocket.lineTo(310, 355);
+            rocket.quadraticCurveTo(180, 340, 76, 270);
+            rocket.closePath();
+            rocket.fillStyle = '#B8A381';
+            rocket.fill();
+            rocket.stroke();
+
+            rocket.beginPath();
+            rocket.moveTo(240, 325);
+            rocket.lineTo(240, 410);
+            rocket.quadraticCurveTo(270, 430, 310, 425);
+            rocket.quadraticCurveTo(350, 390, 314, 340);
+            rocket.lineTo(240, 326);
+            rocket.quadraticCurveTo(250, 380, 330, 380);
+            rocket.fill();
+            rocket.stroke();
+
+            rocket.beginPath();
+            rocket.moveTo(253, 355);
+            rocket.lineTo(253, 420);
             rocket.stroke();
         }
 
