@@ -1,7 +1,4 @@
-jQuery(document).ready(function(){
-
-    $ = jQuery;
-
+$(document).ready(function(){
     canvas_cow.init();
     canvas_rocketship.init();
     mk_analytics.init();

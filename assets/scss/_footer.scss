@@ -16,6 +16,7 @@ footer {
 
         &:hover, &:active, &:focus {
             color: $white;
+            text-decoration: none;
             span:before {
                 @include transform( rotate(180deg) );
             }
