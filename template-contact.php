@@ -10,6 +10,7 @@ get_header(); ?>
                     Or just <span class="rocket-toggle ga-tracking" data-event-category="Contact Page" data-event-action="Clicked Text Link" data-event-label="">click here</span> to see the animation ;)
                 </div>
             </div>
+            <div class="ajax-loader"></div>
             <form id="contact-form">
                 <div>
                     <label for="contact-name">Name</label>

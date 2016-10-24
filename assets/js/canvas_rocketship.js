@@ -5,7 +5,6 @@ var canvas_rocketship = canvas_rocketship || (function() {
     if (canvas !== null && canvas.getContext){
         // canvas drawing will be 2D
         var rocket = canvas.getContext('2d');
-
         // determine center of canvas
         var centerX = canvas.width / 2;
     }
@@ -110,6 +109,7 @@ var canvas_rocketship = canvas_rocketship || (function() {
     }
 
     return {
-        init : init
+        init : init,
+        blast_off : blast_off
     };
 })();
