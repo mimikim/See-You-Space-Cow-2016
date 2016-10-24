@@ -57,31 +57,6 @@ var canvas_rocketship = canvas_rocketship || (function() {
             rocket.fillStyle = attrs.rocket_body;
             rocket.fill();
             rocket.stroke();
-        }
-    }
-
-    function blast_off() {
-        if (canvas.getContext){
-            // fuel combustion!
-            rocket.beginPath();
-            rocket.lineJoin = attrs.line_join;
-            rocket.moveTo(150, 500);
-            rocket.quadraticCurveTo(100, 600, 200, 650);
-            rocket.quadraticCurveTo(300, 600, 250, 500);
-            rocket.closePath();
-            rocket.fillStyle = 'orange';
-            rocket.fill();
-            rocket.stroke();
-
-            rocket.beginPath();
-            rocket.lineJoin = attrs.line_join;
-            rocket.moveTo(180, 500);
-            rocket.quadraticCurveTo(150, 550, 200, 580);
-            rocket.quadraticCurveTo(250, 550, 220, 500);
-            rocket.closePath();
-            rocket.fillStyle = 'yellow';
-            rocket.fill();
-            rocket.stroke();
 
             // backpack
             rocket.beginPath();
@@ -107,6 +82,31 @@ var canvas_rocketship = canvas_rocketship || (function() {
             rocket.beginPath();
             rocket.moveTo(253, 355);
             rocket.lineTo(253, 420);
+            rocket.stroke();
+        }
+    }
+
+    function blast_off() {
+        if (canvas.getContext){
+            // fuel combustion!
+            rocket.beginPath();
+            rocket.lineJoin = attrs.line_join;
+            rocket.moveTo(150, 500);
+            rocket.quadraticCurveTo(100, 600, 200, 650);
+            rocket.quadraticCurveTo(300, 600, 250, 500);
+            rocket.closePath();
+            rocket.fillStyle = 'orange';
+            rocket.fill();
+            rocket.stroke();
+
+            rocket.beginPath();
+            rocket.lineJoin = attrs.line_join;
+            rocket.moveTo(180, 500);
+            rocket.quadraticCurveTo(150, 550, 200, 580);
+            rocket.quadraticCurveTo(250, 550, 220, 500);
+            rocket.closePath();
+            rocket.fillStyle = 'yellow';
+            rocket.fill();
             rocket.stroke();
         }
 
