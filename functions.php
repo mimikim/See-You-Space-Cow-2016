@@ -1,7 +1,7 @@
 <?php
 // default theme supports
 add_theme_support('post-thumbnails');
-show_admin_bar( false );
+//show_admin_bar( false );
 
 // combine all function files
 function mk_combine_functions() {

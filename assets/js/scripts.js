@@ -1,8 +1,9 @@
+$ = jQuery;
+
 jQuery(document).ready(function(){
 
-    $ = jQuery;
-
-    var site_url = theme_url.url;
+    var site_url    = theme_url.url,
+        window_url  = window.location.href;
 
     $('.ga-tracking').on('click', function() {
         ga('send', {
@@ -23,73 +24,74 @@ jQuery(document).ready(function(){
     // homepage
     $( ".splash .title" ).fadeIn( 800 );
 
-    load_cow_butt();
-
-    // create rocketship
-    create_rocketship();
+    canvas_cow.load();
+    canvas_rocketship.load();
 
     $('.rocket-toggle').on('click', function() {
-        blast_off();
+        canvas_rocketship.blast_off();
     });
 
 
-    $('.homepage-slider').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        centerMode: true,
-        swipeToSlide: true,
-        autoplay: true,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+    if( $('.homepage-slider').length ) {
+        $('.homepage-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            centerMode: true,
+            swipeToSlide: true,
+            autoplay: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false
+                    }
                 }
-            },
-            {
-                breakpoint: 680,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false
-                }
-            }
-        ]
-    });
+            ]
+        });
+    }
 
-    $('.portfolio-slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.portfolio-slider-nav',
-        swipeToSlide: true
-    }).click(function() {
-        $('.portfolio-slider-for').slick('slickGoTo', parseInt($('.portfolio-slider-for').slick('slickCurrentSlide'))+1);
-        $('.portfolio-slider-nav').slick('slickGoTo', parseInt($('.portfolio-slider-nav').slick('slickCurrentSlide'))+1);
-    });
-
-    $('.portfolio-slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.portfolio-slider-for',
-        dots: true,
-        focusOnSelect: true,
-        infinite: true,
-        swipeToSlide: true,
-        responsive: [
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false
+    if($('.portfolio-slider-nav').length) {
+        $('.portfolio-slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.portfolio-slider-nav',
+            swipeToSlide: true
+        }).click(function() {
+            $('.portfolio-slider-for').slick('slickGoTo', parseInt($('.portfolio-slider-for').slick('slickCurrentSlide'))+1);
+            $('.portfolio-slider-nav').slick('slickGoTo', parseInt($('.portfolio-slider-nav').slick('slickCurrentSlide'))+1);
+        });
+        $('.portfolio-slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.portfolio-slider-for',
+            dots: true,
+            focusOnSelect: true,
+            infinite: true,
+            swipeToSlide: true,
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false
+                    }
                 }
-            }
-        ]
-    });
+            ]
+        });
+    }
 
     var category_array = [],
         order_by_filter = $('#order-by-selector'),
@@ -176,6 +178,5 @@ jQuery(document).ready(function(){
         }
 
     });
-
 
 });
